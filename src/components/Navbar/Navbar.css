@@ -1,0 +1,163 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  color: #e5e5e5;
+  font-size: 14px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  z-index: 1;
+  padding: 5px 0;
+}
+
+.rightNav {
+  display: flex;
+  gap: 25px;
+  margin: 0 40px 0 0;
+  align-items: center;
+}
+.leftNav {
+  display: flex;
+  margin: 4px 0 0 50px;
+  align-items: center;
+  gap: 20px;
+}
+
+.leftNav li {
+  cursor: pointer;
+}
+.ulNav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+.logoNav {
+  width: 10%;
+  height: 60%;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.profile .dropdown {
+  position: absolute;
+  border: 1px solid black;
+  right: 0rem;
+  top: 2.1rem;
+  width: max-content;
+  background: #191919;
+  border-radius: 2px;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  display: none;
+  font-size: 13px;
+}
+
+.profile:hover .dropdown {
+  display: block;
+  cursor: pointer;
+}
+
+.bellIcon {
+  position: relative;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.bellNotification {
+  width: max-content;
+  background: #191919a8;
+  border-radius: 2px;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 1.5rem;
+  right: -6rem;
+  display: none;
+  border: 1px solid black;
+}
+
+.bellNotification p {
+  padding: 15px 15px;
+  margin: 0px;
+}
+
+.bellIcon:hover .bellNotification {
+  display: block;
+}
+
+.bellNotification p:hover {
+  animation: colorchange 1s ease-in-out;
+}
+
+@keyframes colorchange {
+  0% {
+    background: #191919a8;
+  }
+  100% {
+    background: rgba(255, 0, 0, 0.677);
+  }
+}
+.dark-nav {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.896) 90%,
+    transparent
+  );
+}
+
+
+@media (width < 450px) {
+  .ulNav{
+
+    display: none;
+  }
+
+  .logoNav{
+    width: 70px;
+    height: 60%;
+  }
+
+  .leftNav {
+    display: flex;
+    margin: 4px 0 0 30px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rightNav {
+    display: flex;
+    gap: 25px;
+    margin: 0 20px 0 0;
+    align-items: center;
+   
+  }
+
+  .search img{
+    width: 10px;
+  }
+  .bellIcon img{
+    width: 10px;
+  }
+
+  .profile .arrow{
+    width: 10px;
+  }
+
+  .profile-img{
+    width: 20px;
+  }
+  .userNav{
+    font-size: 0.7rem;
+  }
+}

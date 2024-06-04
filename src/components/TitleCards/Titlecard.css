@@ -1,0 +1,56 @@
+.titlecards {
+  margin-top: 50px;
+}
+
+.titlecards h2 {
+  margin-bottom: 10px;
+}
+
+.card-list {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  gap: 15px;
+  border: none;
+}
+
+.card .card-img {
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card .card-text {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.card :hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+@media (width < 450px) {
+  .titlecards h2 {
+    font-size: 1rem;
+  }
+
+  .card-list {
+    gap: 10px;
+  }
+  .card .card-img {
+    width: 8rem;
+    height: 9rem;
+    border-radius: 5px;
+  }
+  .card .card-text {
+    font-size: 0.6rem;
+  }
+}
