@@ -9,10 +9,12 @@ import { useEffect, useRef } from "react";
 import { logout } from "../../firebase";
 function Navbar() {
   const navRef = useRef();
-//used useEfect to create a effect when scrolled the window
+  //used useEfect to create a effect when scrolled the window
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 140) {
+        //navRef is a referece that we add to nav class
         navRef.current.classList.add("dark-nav");
       } else {
         navRef.current.classList.remove("dark-nav");
@@ -22,6 +24,7 @@ function Navbar() {
 
   return (
     <>
+
       <nav ref={navRef} className="nav">
         <div className="leftNav">
           <img src={logo} alt="" className="logoNav" />
