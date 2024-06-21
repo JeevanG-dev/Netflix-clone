@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 import { logout } from "../../firebase";
 function Navbar() {
   const navRef = useRef();
-
+//used useEfect to create a effect when scrolled the window
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 140) {
