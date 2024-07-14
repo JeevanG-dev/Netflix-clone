@@ -14,7 +14,7 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 140) {
-        //navRef is a referece that we add to nav class
+        //navRef is a referece that we add to nav classnpm 
         navRef.current.classList.add("dark-nav");
       } else {
         navRef.current.classList.remove("dark-nav");
